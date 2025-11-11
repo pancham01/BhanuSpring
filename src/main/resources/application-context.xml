@@ -12,13 +12,12 @@
 
 
 
-	<bean name="e1" class="com.bhanu.spring.model.Employee">
+	<bean name="e1" class="com.bhanu.spring.model.Employee" autowire= "constructor">
 
-		<property name="name" value="Ansh" />
-		<property name="gender" value="Male" />
-		<property name="id" value="908" />
-		<property name="address"  ref="add"/>
-
+		<constructor-arg name="name" value="Ansh" />
+		<constructor-arg name="gender" value="Male" />
+		<constructor-arg name="id" value="908" />
+	
 	</bean>
 
 
