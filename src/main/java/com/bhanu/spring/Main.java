@@ -11,7 +11,11 @@ public class Main {
 
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
 		Employee bean = ioc.getBean("e1", Employee.class);
+		Employee bean1 = ioc.getBean("e1", Employee.class);
+		Employee bean2 = ioc.getBean("e1", Employee.class);
 		System.out.println(bean);
+		System.out.println(bean1);
+		System.out.println(bean2);
 		
 
 	}

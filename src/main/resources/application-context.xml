@@ -12,7 +12,7 @@
 
 
 
-	<bean name="e1" class="com.bhanu.spring.model.Employee" autowire= "constructor">
+	<bean name="e1" class="com.bhanu.spring.model.Employee" scope = "singleton" autowire= "constructor">
 
 		<constructor-arg name="name" value="Ansh" />
 		<constructor-arg name="gender" value="Male" />
