@@ -1,8 +1,12 @@
 package com.bhanu.spring.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
+//@Scope(value = "prototype")
 public class Address {
 
-	private String city, state;
+	private String city="GZB", state;
 
 	public Address() {
 		System.out.println("Address.Address()");

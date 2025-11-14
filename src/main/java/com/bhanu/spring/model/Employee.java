@@ -1,20 +1,24 @@
 package com.bhanu.spring.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+//@Scope(value = "prototype")
 public class Employee {
 
-//	Instance var / attributes / Properties 
+	// Instance var / attributes / Properties
 	private String name, gender;
 	private int id;
+
 	
 	private Address address;
-	
 
 	public Employee() {
 		super();
 		System.out.println("Employee.Employee()");
 	}
 
-	
 	public Employee(String name, String gender, int id, Address address) {
 		super();
 		this.name = name;
@@ -24,17 +28,15 @@ public class Employee {
 		System.out.println("Employee.Employee(5)");
 	}
 
-
 	public Address getAddress() {
 		return address;
 	}
 
-
+	@Autowired
 	public void setAddress(Address address) {
 		this.address = address;
 		System.out.println("Employee.setAddress()");
 	}
-
 
 	public String getName() {
 		return name;
@@ -63,8 +65,9 @@ public class Employee {
 		System.out.println("Employee.setId()");
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", gender=" + gender + ", id=" + id + ", address=" + address + "]";
+	}
 
-	
-
-	
 }
